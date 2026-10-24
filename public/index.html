@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <title>Daily Goal Manager</title>
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+  <div class="container">
+
+    <h1>Daily Goal Manager</h1>
+
+
+    <div class="input-box">
+
+      <input
+        type="text"
+        id="studentName"
+        placeholder="Student Name"
+      >
+
+
+      <input
+        type="text"
+        id="title"
+        placeholder="Enter your goal"
+      >
+
+
+      <input
+        type="date"
+        id="date"
+      >
+
+
+      <input
+        type="number"
+        id="year"
+        placeholder="Year"
+      >
+
+
+      <button onclick="addTask()">
+        Add Goal
+      </button>
+
+    </div>
+
+
+    <h2>My Goals</h2>
+
+
+    <div id="taskList"></div>
+
+  </div>
+
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>

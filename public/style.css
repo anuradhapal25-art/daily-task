@@ -1,0 +1,302 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  background: #0b1020;
+  color: #ffffff;
+  padding: 40px 20px;
+}
+
+/* Main Container */
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 35px;
+
+  background: #11182b;
+
+  border: 1px solid #273352;
+  border-radius: 18px;
+
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+}
+
+
+/* Heading */
+
+h1 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 35px;
+  color: #ffffff;
+}
+
+h2 {
+  font-size: 21px;
+  margin-bottom: 20px;
+  color: #dce4ff;
+}
+
+
+/* Form */
+
+.input-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-bottom: 35px;
+}
+
+
+input {
+  width: 100%;
+  height: 48px;
+
+  padding: 0 15px;
+
+  background: #0b1120;
+  color: white;
+
+  border: 1px solid #293657;
+  border-radius: 9px;
+
+  outline: none;
+
+  font-size: 14px;
+}
+
+
+input::placeholder {
+  color: #75809a;
+}
+
+
+input:focus {
+  border-color: #7185ff;
+
+  box-shadow: 0 0 0 3px rgba(113, 133, 255, 0.12);
+}
+
+
+/* Add Goal Button */
+
+.input-box button {
+  grid-column: 1 / -1;
+
+  height: 48px;
+
+  border: none;
+  border-radius: 9px;
+
+  background: #586df5;
+
+  color: white;
+
+  font-size: 15px;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+
+.input-box button:hover {
+  background: #6b7eff;
+  transform: translateY(-2px);
+}
+
+
+/* Task Card */
+
+.task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 20px;
+
+  padding: 22px;
+
+  margin-bottom: 15px;
+
+  background: #171f35;
+
+  border: 1px solid #293657;
+  border-radius: 14px;
+
+  transition: 0.2s;
+}
+
+
+.task:hover {
+  border-color: #465a91;
+  transform: translateY(-2px);
+}
+
+
+/* Task Information */
+
+.task-info {
+  flex: 1;
+}
+
+
+.task-info h3 {
+  font-size: 19px;
+
+  margin-bottom: 12px;
+
+  color: #ffffff;
+}
+
+
+.task-info p {
+  margin-top: 7px;
+
+  font-size: 14px;
+
+  color: #aeb8d0;
+
+  line-height: 1.5;
+}
+
+
+/* Pending Status */
+
+.task-info p:nth-child(3) {
+  color: #f0b84b;
+}
+
+
+/* Complete Goal Button */
+
+.complete-btn {
+  display: block;
+
+  width: 135px;
+
+  padding: 11px 14px;
+
+  margin-bottom: 10px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: #2f9e72;
+
+  color: white;
+
+  font-size: 13px;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+
+.complete-btn:hover {
+  background: #38b982;
+  transform: translateY(-2px);
+}
+
+
+/* Completed Text */
+
+.completed-text {
+  width: 135px;
+
+  padding: 10px;
+
+  margin-bottom: 10px;
+
+  text-align: center;
+
+  border-radius: 8px;
+
+  background: rgba(47, 158, 114, 0.15);
+
+  color: #48d597 !important;
+
+  font-weight: bold;
+}
+
+
+/* Delete Button */
+
+.delete-btn {
+  width: 135px;
+
+  padding: 10px 14px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: #c44747;
+
+  color: white;
+
+  font-size: 13px;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+
+.delete-btn:hover {
+  background: #e05252;
+  transform: translateY(-2px);
+}
+
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+  body {
+    padding: 20px 12px;
+  }
+
+
+  .container {
+    padding: 22px;
+  }
+
+
+  h1 {
+    font-size: 27px;
+  }
+
+
+  .input-box {
+    grid-template-columns: 1fr;
+  }
+
+
+  .input-box button {
+    grid-column: auto;
+  }
+
+
+  .task {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+
+  .complete-btn,
+  .completed-text,
+  .delete-btn {
+    width: 100%;
+  }
+
+}
